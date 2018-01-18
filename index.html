@@ -3,6 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="sega3.css" />
+
+  <script>
+  function escapeHtml(text) {
+    var map = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+  }
+  
+  function toggle(selector) {
+    var el = document.querySelector(selector);
+    el.classList.toggle('-collapsed');
+  }
+
+  function setMod(el, className, flag) {
+      el = document.querySelector(el);
+      console.log(flag);
+      if (typeof flag == 'undefined') {
+        el.className = ' ' + className;
+      } else {
+        if (flag)  el.className += ' ' + className; else el.className = el.className.replace(className, '');
+      }
+  }
+    
+  function showCode(selector) {
+    var el = document.querySelector(selector);
+    var c = el.outerHTML;
+    c = escapeHtml(c);
+    document.write( '<br /><code class="-block">' + c + '</code>');
+  }
+  </script>
+  
 </head>
 
 <body>
@@ -22,55 +58,49 @@
 
 
       <h2>Ссылки</h2>
-      <ul>
+      <ul class="links">
         <li><a href="">Обычная ссылка</a></li>
         <li>
-          <a href="" class="-pseudo-link">Внутренняя ссылка</a> <code>-pseudo-link</code>
+          <a href="" class="-pseudo-link">Внутренняя ссылка</a>
         </li>
       </ul>
-
+    
+      <script>
+          showCode('.links');
+      </script>
+    
       <h2>Кнопки</h2>
         
       <div class="button-examples">
         <button>Отмена</button>
         <input type="submit" value="Сохранить">
-		<a class="button -main"><i class="mdi mdi-check"></i> -main</a>
+		<a class="button -main"><i class="mdi mdi-check"></i> Готово</a>
 		<button class="-round"><i class="mdi mdi-plus"></i></button>
       </div>
 
-      <div class="indent-top">
-      <code>
-        &lt;button&gt;
-      </code>
-      <code>
-        &lt;input type="submit"&gt;
-      </code>    
-      <code>
-        &lt;a class="button -main"&gt;
-      </code>
-      <code>
-        &lt;button class="-round"&gt;
-      </code>
-      </div>
+      <script>
+          showCode('.button-examples');
+      </script>
+    
 
         <h2>TAP</h2>
-  		<p class="-indent-top">
+  		<nav class="taps -indent-top">
 			<span class="tap">
-				<a>Выбери .tap</a>
+				<a>1</a>
 			</span>
 	
 			<span class="tap -active">
-				.tap -active
-			</span>	
-		</p>
+				2
+			</span>
+		</nav>
+        <script>
+          showCode('.taps');
+        </script>
 
     
     <section>
   
       <h2>Таблицы</h2>
-      <code>
-         &lt;table class="table -hover" /&gt;
-      </code>
       
       <table class="table -hover">
         <colgroup>
@@ -172,18 +202,18 @@
       </tbody>
     </table>
         
-        <p>
-          <form>
+    <form>
           Модификаторы: 
           <ul class="-unstyled -indent-top">
             <li><input type="checkbox" onclick="setMod('.table', '-auto', this.checked)"> -auto</li>
             <li><input type="checkbox" checked onclick="setMod('.table', '-hover', this.checked)"> -hover</li>
           </ul>
 
-          </form>  
-            
-        </p>
+    </form>  
   
+    <script>
+        showCode('.table');
+    </script>
     
       <h2>Формы</h2>
       
@@ -212,56 +242,23 @@
           <label></label>
           <input type="submit" value="Сохранить" />
         </div>
-        
-        
       </form>
 
     
+      <script>
+          showCode('.form');
+      </script>
 
     
 	
     </section>
 	
    
-    <div style="height:100px">
-    </div>
     
     <style>
       .button-examples button, input, a {margin-right:16px; vertical-align:middle}
-      
-.-animated { 
-    -webkit-animation-duration: 0.5s; 
-    animation-duration: 0.5s; 
-    -webkit-animation-timing-function: ease-in-out; 
-    animation-timing-function: ease-in-out; 
-} 
-
-@-webkit-keyframes moveDown { 
-    0% { -webkit-transform: translateY(0); } 
-    100% { -webkit-transform: translateY(80px); } 
-} 
-
-@keyframes moveDown { 
-    0% { transform: translateY(0); } 
-    100% { transform: translateY(80px); } 
-} 
-
-.moveDown { 
-    -webkit-animation-name: moveDown; 
-    animation-name: moveDown; 
-}
-    
     </style>
     
-    <script>
-      function animateButton(el) {
-        //el = document.querySelector(el);
-        toggle(el,'moveDown');
-      }
-    </script>
-    
-  </section>
-  
   <section>
   
       <h2>Модификаторы</h2>
@@ -285,34 +282,5 @@
     © 2017
   </footer>
 
-  
-  <script>
-    
-    function toggle(el, className) {
-      if(el) {
-        el = document.querySelector(el);
-        if(el.className.indexOf(className)!= -1) {
-          el.className = el.className.replace(className, '');
-        } else {
-          el.className += ' ' + className;
-        }
-        //el.className = className;
-        console.log('toggle:', el.className);
-      }
-    }
-
-  function setMod(el, className, flag) {
-      el = document.querySelector(el);
-      console.log(flag);
-      if (typeof flag == 'undefined') {
-        el.className = ' ' + className;
-      } else {
-        if (flag)  el.className += ' ' + className; else el.className = el.className.replace(className, '');
-      }
-      
-    }
-
-    
-  </script>
 </body>
 </html>

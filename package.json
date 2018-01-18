@@ -1,10 +1,10 @@
 {
   "name": "sega3",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "SEGA 3 — CSS library",
   "main": "index.html",
   "scripts": {
-    "start": "open index.html"  
+    "start": "open index.html"
   },
   "repository": {
     "type": "git",

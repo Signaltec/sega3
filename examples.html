@@ -6,10 +6,33 @@
 </head>
 
 <body>
-  &nbsp;
   
-  <div class="login">
-    <i class="mdi mdi-lock -flaticon"></i>
+  <!-- login -->
+  <section class="login -collapsed">
+    &nbsp;
+    <form>
+      <div class="field">
+        <label>Имя</label>
+        <input name="name" type="text" autofocus>
+      </div>
+      <div class="field">
+        <label>Пароль</label> 
+        <input name="password" type="password">
+      </div>
+      <div class="field">
+        <input type="submit" value="Вход" onclick="login()">
+      </div>
+    </form>
+    
+    <div class="login-button">
+      <i class="mdi mdi-lock -flaticon"  onclick="login()"></i>
+    </div>
+  </section>
+  
+  <section class="normal">
+    &nbsp;
+  <div class="login-button">
+    <i class="mdi mdi-lock -flaticon" onclick="login()"></i>
   </div>
   
   <nav class="menu menu-main">
@@ -21,6 +44,9 @@
     <a href="#lights">СО</a>
 
     <a href="#plans">Планы</a>
+
+    <a href="#plans">Программы</a>
+  
   </nav>
   
   <main>
@@ -106,6 +132,7 @@
         <a class="-pseudo-link"><i class="mdi mdi-map-marker"></i> а/д «Пятницкое шоссе», 5км+960м, н.п. Обухово, из Солнечногорска</a>
         </div>
       </article>
+  </section>
 
 <style>
   /* list-controller */
@@ -147,7 +174,7 @@
         </div>
         <div class="field">
           <label>Идентификатор</label>
-          <input class="-half" />
+          <input type="text" class="-half" />
         </div>
         </fieldgroup>
 
@@ -205,7 +232,8 @@
 </section>       
     
     
-  </main>  
+  </main>
+</section>
 </body>
   
   
@@ -229,7 +257,19 @@
     el3.innerHTML = '<form>' + f.innerHTML + '</form>';
   }
   
-  
+  function login() {
+    var normal = document.querySelector('.normal');
+    var login = document.querySelector('.login');
+
+    if (login.classList.contains('-collapsed')) {
+      normal.classList.add('-collapsed');
+      login.classList.remove('-collapsed')
+    } else {
+      normal.classList.remove('-collapsed');
+      login.classList.add('-collapsed')
+    }
+  }
+    
 </script>
 
 </html>

@@ -32,14 +32,15 @@ input[type=submit], button.-main, .button.-main {
         color: white; 
 }
 
-button:hover, .button:hover, input[type=submit]:hover {
+button:hover, .button:hover {
         opacity:0.8;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px LightSkyBlue; 
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.32) 
 }
 
-button:active , .button:active , input[type=submit]:active  {
-        border-color: Red;
-        color: Red;
+
+input[type=submit]:hover, button.-main:hover, .button.-main:hover {
+        opacity:0.8;
+        box-shadow: 0 3px 6px grba(0,140,255,0.16), 0 3px 6px grba(0,140,255,0.32); 
 }
 
 button.-round {
@@ -86,7 +87,6 @@ button.-disabled:hover, .button.-disabled:hover, input[type=submit].-disabled:ho
 fieldgroup {zoom: 1;}
 fieldgroup:before { display: block; content: ""; }
 fieldgroup:after { display: table; clear: both; content: ""; }
-
 fieldgroup .field {float:left; margin-right:1em}
 
 .field input, select {margin-right: 2px; }
@@ -97,11 +97,9 @@ fieldgroup .field {float:left; margin-right:1em}
 
 input[type="text"], input[type="number"], input[type="password"], textarea, select {
     width: 200px;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    border-radius: 2px;
+    box-sizing: border-box;
     box-shadow: none;
+    border: solid 1px rgba(0,0,0,0.1)
     font-size: 0.9em; }
 
 input[type="text"], input[type="password"], textarea {
@@ -203,7 +201,7 @@ span.date, div.date {color: rgba(0,0,0,0.5) }
   }
 
 /* Login */
-.login {
+.login-button {
   position:absolute;
   top: 2.8em;
   right: 2em;
@@ -211,6 +209,20 @@ span.date, div.date {color: rgba(0,0,0,0.5) }
   margin: 0; 
   padding:0;
 }
+
+.login {width:100%; height:100%; background: black;}
+
+.login label {color: rgba(255,255,255,0.5)}
+
+.login .login-button .-flaticon {
+  background: black;
+  color: dodgerblue;
+}
+
+
+.login form {margin:15em auto; width:15em}
+
+.login form input[type=text], .login form input[type=password] {background: rgba(255,255,255,0.15); color:rgba(255,255,255,0.6)}
 
 /* menu-main */
 

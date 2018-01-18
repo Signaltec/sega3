@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="sega3.css" />
+</head>
+
+<body>
+
+  <main>
+    
+    <h1 class="-border-bottom"><i class="mdi mdi-android-studio"></i> Sega 3 &middot; Примеры</h1>
+    
+    <section class="t-center">
+
+      <p>
+        <a href="index.html">index.html</a>
+      </p>
+           
+    </section>
+
+
+<!-- C O N T R O L L E R S ------------------------------------------->
+    
+<section id="#controllers">
+      <hgroup>
+        <h2>Контроллеры</h2>
+        <button class="-round"><i class="mdi mdi-plus" onclick="toggle('.form-controller')"></i></button>
+      </hgroup>
+      
+      <form class="form form-controller -collapsed">
+        <div class="field">
+          <label>Имя контроллера</label>
+          <input type="text" placeholder="AS2343…">
+        </div>
+        <div class="field">
+          <label>IP-адрес контроллера
+            <span class="-error">Неправильный формат IP-адреса</span>
+          </label>
+          <input type="text" placeholder="10.1.0.10">
+        </div>
+        <div class="field">
+          <label>Координаты <a class="-pseudo-link -disabled" href="selectOnMap">выбрать точку на карте</a></label>
+          Широта <input type="text" class="-half" placeholder="37.245"> Долгота <input type="text"  class="-half" placeholder="52.165">
+        </div>
+        <div class="field">
+          <label>Адрес</label>
+          <input type="text" class="-full" placeholder="Бауманская, 6с2">
+        </div>
+        <div class="field">
+          <label>Описание</label>
+          <textarea class="-full"></textarea>
+        </div>
+        <div class="field">
+          <label>Модель</label>
+          <select><option>Синтез</option></select>
+        </div>        
+
+        <input type="submit" value="Сохранить">
+      </form>
+    
+      <section class="list list-controller">
+      <article class="controller-1">
+        
+        <div class="actions">
+          <i class="mdi mdi-pencil"onclick="replaceForm('.controller-1','.form-controller')"></i>
+          <i class="mdi mdi-delete" onclick="confirm('Хотите удалить контроллер?')"></i>
+        </div>     
+        
+        <section class="details-controller">
+        
+        <span class="id"><i class="mdi mdi-cube-send"></i> AS5000456</span> <i class="mdi mdi-lan-connect"></i> <span class="ip">192.168.100.111</span> <span class="date">28.10.2018</span>
+        <div class="address">
+        <a class="-pseudo-link"><i class="mdi mdi-map-marker"></i> а/д «Пятницкое шоссе», 5км+960м, н.п. Обухово, из Солнечногорска</a>
+        </div>
+        </section>
+      </article>  
+      
+      <article>
+        <div class="actions">
+          <i class="mdi mdi-pencil"></i>
+          <i class="mdi mdi-delete" onСlick="alert('Удалить контроллер?')"></i>
+        </div>
+        
+        <span class="id"><i class="mdi mdi-cube-send"></i> AS5000456</span> <i class="mdi mdi-lan-connect"></i> <span class="ip">10.0.1.10</span> <span class="date">28.10.2018</span>
+        <div class="address">
+        <a class="-pseudo-link"><i class="mdi mdi-map-marker"></i> а/д «Пятницкое шоссе», 5км+960м, н.п. Обухово, из Солнечногорска</a>
+        </div>
+      </article>
+
+      <article>
+        <div class="actions">
+          <i class="mdi mdi-pencil"></i>
+          <i class="mdi mdi-delete"></i>
+        </div>
+        
+        <span class="id"><i class="mdi mdi-cube-send"></i> AS5000456</span> <i class="mdi mdi-lan-connect"></i> <span class="ip">10.0.1.10</span> <span class="date">28.10.2018</span>
+        <div class="address">
+        <a class="-pseudo-link"><i class="mdi mdi-map-marker"></i> а/д «Пятницкое шоссе», 5км+960м, н.п. Обухово, из Солнечногорска</a>
+        </div>
+      </article>
+
+<style>
+  /* list-controller */
+  .list-controller .address {margin-top:0.3em}  
+  .list-controller .id, .ip {display: inline-block; width:9em;}
+  .list-controller .id { font-weight: bold;}
+  
+  .list-controller .actions {
+    top: 1.5em;
+  }
+</style>
+</section>
+    
+
+    
+    
+    
+    
+    
+    
+ <!-- L I G H T S ------------------------------------------------------>
+ <section id="#lights">
+      <hgroup>
+        <h2>Светофорные объекты</h2>
+        <button class="-round"><i class="mdi mdi-plus" onclick="toggle('.form-light')"></i></button>
+      </hgroup>
+
+      
+      <form class="form form-light -collapsed">
+        
+        <fieldgroup>
+        <div class="field">
+          <label>Контроллер</label>
+          <select><option>AS200156001</option></select>
+        </div>  
+        <div class="field">
+          <label>Модель</label>
+          <select><option>Светоч</option></select>
+        </div>
+        <div class="field">
+          <label>Идентификатор</label>
+          <input class="-half" />
+        </div>
+        </fieldgroup>
+
+        <div class="field">
+          <label>Состояник</label>
+          <select>
+            <option>В пректе</option>
+            <option>Пуско-наладка</option>
+            <option>В эксплуатации</option>
+          
+          </select>
+        </div>
+        
+        <div class="field">
+          <label>Координаты <a class="-pseudo-link -disabled" href="selectOnMap">выбрать точку на карте</a></label>
+          Широта <input type="text" class="-half" placeholder="37.245"> Долгота <input type="text"  class="-half" placeholder="52.165">
+        </div>
+        <input type="submit" value="Сохранить">
+      </form>
+    
+      <section class="list list-light">
+      <article class="light-1 -on">
+        
+        <div class="actions">
+          <i class="mdi mdi-pencil"onclick="replaceForm('.light-1','.form-light')"></i>
+          <i class="mdi mdi-delete" onclick="confirm('Хотите удалить светофор?')"></i>
+        </div>     
+        
+        <section class="details-controller">
+          <span class="id"><i class="mdi mdi-traffic-light"></i> <a href="">AS5000456</a>→1</span> <span class="date">28.10.2018</span>
+        </section>
+        
+      </article>  
+
+      <article class="controller-1 -off">
+        
+        <div class="actions">
+          <i class="mdi mdi-pencil"onclick="replaceForm('.light-1','.form-light')"></i>
+          <i class="mdi mdi-delete" onclick="confirm('Хотите удалить светофор?')"></i>
+        </div>     
+        
+        <section class="details-controller">
+          <span class="id"><i class="mdi mdi-traffic-light"></i> <a href="">AS5000456</a>→2</span> <span class="date">Пуско-наладка</span>
+        </section>
+        
+      </article>
+      </section>       
+
+<style>
+  /* list-light */
+  .list-light .id {display: inline-block; font-weight: bold; width:10em;}
+  .list-light .-on .id {color:MediumSeaGreen}
+  .list-light .-off .id {color:LightGray}
+</style>      
+</section>       
+    
+    
+  </main>  
+</body>
+  
+  
+<script>
+
+  function toggle(selector) {
+    var el = document.querySelector(selector);
+    el.classList.toggle('-collapsed');
+  }
+
+  function replaceForm(selector1, selector2) {
+    var el1 = document.querySelector(selector1);
+    var el2 = document.querySelector(selector2);
+    var el3 = document.querySelector(selector1 + ' .details-controller');
+
+    el1.classList.add('-edit');
+    
+    var f = el2.cloneNode(true);
+    
+    console.log(f);
+    el3.innerHTML = '<form>' + f.innerHTML + '</form>';
+  }
+  
+  
+</script>
+
+</html>

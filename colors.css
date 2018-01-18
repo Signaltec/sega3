@@ -1,0 +1,13 @@
+// Colors -------------------
+
+body { 
+  background: white; 
+  color: rgba(0,0,0,0.7); 
+}
+
+h1,h2,h3 {color: black}
+a:link { color: dodgerblue; }
+a:active { color: orangered; }
+
+.-error { color: orangered; }
+.-warning { color: tomato; }

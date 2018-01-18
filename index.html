@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="sega3.css" />
+</head>
+
+<body>
+
+  <main>
+    
+    <h1 class="-border-bottom"><i class="mdi mdi-android-studio"></i> Sega 3</h1>
+    
+    <section class="t-center">
+
+      <p>
+        Компоненты, верстаются при помощи css-классов,
+        вариации элемента задаются модификаторами.
+      </p>
+           
+    </section>
+
+
+      <h2>Ссылки</h2>
+      <ul>
+        <li><a href="">Обычная ссылка</a></li>
+        <li>
+          <a href="" class="-pseudo-link">Внутренняя ссылка</a> <code>-pseudo-link</code>
+        </li>
+      </ul>
+
+      <h2>Кнопки</h2>
+        
+      <div class="button-examples">
+        <button>Отмена</button>
+        <input type="submit" value="Сохранить">
+		<a class="button -main"><i class="mdi mdi-check"></i> -main</a>
+		<button class="-round"><i class="mdi mdi-plus"></i></button>
+      </div>
+
+      <div class="indent-top">
+      <code>
+        &lt;button&gt;
+      </code>
+      <code>
+        &lt;input type="submit"&gt;
+      </code>    
+      <code>
+        &lt;a class="button -main"&gt;
+      </code>
+      <code>
+        &lt;button class="-round"&gt;
+      </code>
+      </div>
+
+        <h2>TAP</h2>
+  		<p class="-indent-top">
+			<span class="tap">
+				<a>Выбери .tap</a>
+			</span>
+	
+			<span class="tap -active">
+				.tap -active
+			</span>	
+		</p>
+
+    
+    <section>
+  
+      <h2>Таблицы</h2>
+      <code>
+         &lt;table class="table -hover" /&gt;
+      </code>
+      
+      <table class="table -hover">
+        <colgroup>
+            <col class="c1">
+            <col class="c1">
+            <col class="c2">
+            <col class="c5">
+            <col class="c5">
+            <col>
+            <col>
+        </colgroup>
+      
+      <thead>
+      <tr class="headers">
+          <th>№</th> 
+          <th>&nbsp;</th> 
+          <th>Тип</th> 
+          <th>RX</th>
+          <th>TX</th>
+          <th>CRC</th>
+          <th>Dropped</th>
+      </tr>
+      </thead>
+
+      <tbody> 
+      <tr>
+
+        <td>1</td>
+
+        <td>
+           <label class="ios7-switch">
+          <input type="checkbox">
+             <span></span>
+          </label>
+        </td>
+
+        <td>
+          <select><option value="10G" label="10G">10G</option><option value="1G" selected="selected" label="1G">1G</option><option value="40G" label="40G">40G</option></select>
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          100
+          </div>  
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          L3
+          </div>  
+        </td>
+
+        <td>
+        </td>
+
+        <td>
+        </td>
+        
+      </tr>
+        
+      <tr>
+
+        <td>2</td>
+
+        <td>
+          <label class="ios7-switch">
+              <input type="checkbox" checked>
+              <span></span>
+          </label>
+        </td>
+
+        <td>
+          <select><option value="10G" label="10G">10G</option><option value="1G" selected="selected" label="1G">1G</option><option value="40G" label="40G">40G</option></select>
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          100
+          </div>  
+        </td>
+
+        <td>
+          <span>—</span>
+          <div class="-misc">
+          L3
+          </div>  
+        </td>
+
+        <td>
+        </td>
+
+        <td>
+        </td>
+        
+      </tr>        
+      </tbody>
+    </table>
+        
+        <p>
+          <form>
+          Модификаторы: 
+          <ul class="-unstyled -indent-top">
+            <li><input type="checkbox" onclick="setMod('.table', '-auto', this.checked)"> -auto</li>
+            <li><input type="checkbox" checked onclick="setMod('.table', '-hover', this.checked)"> -hover</li>
+          </ul>
+
+          </form>  
+            
+        </p>
+  
+    
+      <h2>Формы</h2>
+      
+      <form class="form">
+        <div class="field">
+          <label>IP-адрес</label>
+          <input value="192.168.0.1" class="c6" type="text"/>
+          <span class="-error">Неверный IP-адрес</span>
+        </div>
+
+        <div class="field">
+          <label>Пароль</label>
+          <input value="192.168.0.1" class="c6" type="password"/>
+        </div>
+
+        <div class="field">
+          <label>Маска подсети</label>
+          <select class="c6">
+            <option>
+                255.255.255.0
+            </option>
+          </select>
+        </div>
+        
+        <div class="field">
+          <label></label>
+          <input type="submit" value="Сохранить" />
+        </div>
+        
+        
+      </form>
+
+    
+
+    
+	
+    </section>
+	
+   
+    <div style="height:100px">
+    </div>
+    
+    <style>
+      .button-examples button, input, a {margin-right:16px; vertical-align:middle}
+      
+.-animated { 
+    -webkit-animation-duration: 0.5s; 
+    animation-duration: 0.5s; 
+    -webkit-animation-timing-function: ease-in-out; 
+    animation-timing-function: ease-in-out; 
+} 
+
+@-webkit-keyframes moveDown { 
+    0% { -webkit-transform: translateY(0); } 
+    100% { -webkit-transform: translateY(80px); } 
+} 
+
+@keyframes moveDown { 
+    0% { transform: translateY(0); } 
+    100% { transform: translateY(80px); } 
+} 
+
+.moveDown { 
+    -webkit-animation-name: moveDown; 
+    animation-name: moveDown; 
+}
+    
+    </style>
+    
+    <script>
+      function animateButton(el) {
+        //el = document.querySelector(el);
+        toggle(el,'moveDown');
+      }
+    </script>
+    
+  </section>
+  
+  <section>
+  
+      <h2>Модификаторы</h2>
+	  <ul>
+       <li>Размера: -small, -mid, -big, -extra</li>
+       <li>Состояния: -disabled, -active, -selected, -open, -collapsed, -hide, -visible</li>
+       <li>Положения: -fixed</li>
+       <li>Отображения: -ellipsis, -overflow-hidden</li>
+       <li>Приоритета: -misc</li>
+      </ul>
+
+      <cite>
+        При создании кастомного модификатора, например, для -fixed используется следующий порядок: -fixed-header.
+      </cite>  
+</section>
+
+  
+  </main>
+  
+  <footer>
+    © 2017
+  </footer>
+
+  
+  <script>
+    
+    function toggle(el, className) {
+      if(el) {
+        el = document.querySelector(el);
+        if(el.className.indexOf(className)!= -1) {
+          el.className = el.className.replace(className, '');
+        } else {
+          el.className += ' ' + className;
+        }
+        //el.className = className;
+        console.log('toggle:', el.className);
+      }
+    }
+
+  function setMod(el, className, flag) {
+      el = document.querySelector(el);
+      console.log(flag);
+      if (typeof flag == 'undefined') {
+        el.className = ' ' + className;
+      } else {
+        if (flag)  el.className += ' ' + className; else el.className = el.className.replace(className, '');
+      }
+      
+    }
+
+    
+  </script>
+</body>
+</html>

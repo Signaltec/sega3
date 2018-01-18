@@ -1,0 +1,121 @@
+.clearfix {zoom: 1;}
+.clearfix:before { display: block; content: ""; }
+.clearfix:after { display: table; clear: both; content: ""; }
+
+html {
+  vertical-align: baseline;
+}
+
+body { 
+  font-family: 'PT sans', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+}
+
+/* Responsive ---------------------- */
+@media screen and (min-width: 320px) {
+  main {
+    font-size: 11px;
+    width: 80%; 
+    min-width:450px; 
+    margin: 2em auto
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    font-size: 14px;
+    min-width: 780px;
+    width: 65%; 
+    min-width:450px; 
+    margin: 3em auto
+  }
+}
+
+h1, h2, h3 { 
+  font-family: 'PT sans Caption', sans-serif; 
+  font-size:150%;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+h1 {
+    margin: 0 0 0.4em 0;
+    padding-bottom: 0.3em;
+    font-size: 3em; 
+    text-align: center;
+}
+
+h2 {
+    margin: 1.2em 0 0.4em 0;
+    font-size: 2em; }
+
+h3 {
+    margin: 1em 0 0.4em 0;
+    font-size: 1.2em; }
+
+hgroup h1, hgroup h2, hgroup h2 {
+display: inline-block;
+margin-right:1em;  
+}
+
+cite {
+    display: block;
+    margin: 0;
+    padding: 1em 1em 1em 16px;
+    max-width: 320px;
+    color: rgba(0,0,0,0.7);
+    font-style: italic;
+
+    author {
+        display: block;
+        margin-top: 1em;
+        font-style: italic; } }
+
+code.-block {
+    margin: 0 0 1em 0;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    background: rgba(0,0,0,0.2); }
+
+p { 
+  margin:0 0 1em 0; 
+  line-height: 1.35em;
+}
+
+a {
+    border-bottom: solid 1px;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {opacity: 1;}
+
+/* Списки ------------- */
+li {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em; 
+}
+
+ul.-unstyled { margin: 0; padding: 0; }
+.-unstyled li { list-style-type: none; }
+
+dl {
+    padding: 5px 0 5px 0; 
+}
+
+dt {
+    float: left;
+    margin-right: 4px;
+    min-height: 1em; 
+}
+
+dd { min-height: 1.4em; }
+
+/* AngularJS --------------- */
+[ng-cloak], .ng-cloak { display: none; }
+[ng-click] { cursor: pointer; }

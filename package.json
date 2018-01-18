@@ -1,0 +1,15 @@
+{
+  "name": "sega3",
+  "version": "0.4.0",
+  "description": "SEGA 3 — css library",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Signaltech/sega3.git"
+  },
+  "author": "ildarka",
+  "license": "FREE"
+}

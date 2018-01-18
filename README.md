@@ -1,6 +1,6 @@
 # SEGA 3
 
-СSS-библиотека на основе шрифта PT sans, иконок mdi, css-grid. 
+СSS-библиотека на основе шрифта PT sans, иконок mdi. 
 Компоненты, верстаются при помощи css-классов, стили в components.less. 
 Вариации элемента задаются модификаторами.
 
@@ -14,14 +14,12 @@ npm install sega3
 <link rel="stylesheet" href="node_modules/sega3/sega3.css" />
 
 ## Dependencies
-- codify.css
+- codify.css (сброс стилей)
 - Шрифт PT-Sans
 - Material design icons
 - ios7switch
 
-## Source less files
-src/colors.less — цветовая гамма
-src/base.less — база
-src/grid.less — сетка, отступы
-src/typographic.less — типографика
-src/components.less — таблицы, формы, хидер, футер, кнопки
+## Source files
+- src/typograph.css — типографика
+- src/modifiers.css — модификаторы
+- src/components.css — компоненты (таблицы, формы, хидер, футер, кнопки)

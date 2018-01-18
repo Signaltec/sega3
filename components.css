@@ -74,9 +74,6 @@ fieldgroup:after { display: table; clear: both; content: ""; }
 
 fieldgroup .field {float:left; margin-right:1em}
 
-
-
-
 .field input, select {margin-right: 2px; }
 
 .field label {
@@ -102,6 +99,10 @@ input[type="text"], input[type="password"], select {
 input.-half, select.-half {width: 100px}
 input.-twice, textarea.-twice {width: 400px}
 input.-full, textarea.-full {width: 100%}
+
+/* Errors */
+.-error { color: orangered; }
+.-warning { color: tomato; }
 
 
 

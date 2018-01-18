@@ -3,7 +3,6 @@
 @import "lib/mdi/css/materialdesignicons.min.css";
 @import "lib/ios7switch.css";
 
-@import "colors.css";
-@import "modifiers.css";
 @import "typograph.css";
+@import "modifiers.css";
 @import "components.css";

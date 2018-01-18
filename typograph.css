@@ -10,6 +10,8 @@ body {
   font-family: 'PT sans', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   position: relative;
+  background: white; 
+  color: rgba(0,0,0,0.7); 
 }
 
 /* Responsive ---------------------- */
@@ -34,11 +36,14 @@ body {
 
 h1, h2, h3 { 
   font-family: 'PT sans Caption', sans-serif; 
-  font-size:150%;
+  font-size: 150%;
+  color: black;
+}
+
+h1, h2 { 
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 1;
 }
 
 h1 {
@@ -93,6 +98,9 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+a:link { color: dodgerblue; }
+a:active { color: Red; }
 a:hover {opacity: 1;}
 
 /* Списки ------------- */

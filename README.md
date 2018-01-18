@@ -25,12 +25,3 @@ src/base.less — база
 src/grid.less — сетка, отступы
 src/typographic.less — типографика
 src/components.less — таблицы, формы, хидер, футер, кнопки
-
-## Development
-'''
-  npm install
-  
-  npm run build
-  
-  open index.html
-'''

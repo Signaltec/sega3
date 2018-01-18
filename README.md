@@ -5,7 +5,7 @@
 Вариации элемента задаются модификаторами.
 
 - [Основные элементы](http://signaltech.github.io/sega3/)
-- [Примеры](http://signaltech.github.io/sega3/example.html)
+- [Примеры](http://signaltech.github.io/sega3/examples.html)
 
 ## Installation
 

@@ -27,13 +27,19 @@ button:focus, .button:focus, input[type=submit]:focus {
         outline: none; 
 }
 
+input[type=submit], button.-main, .button.-main {
+        background: dodgerblue;
+        color: white; 
+}
+
 button:hover, .button:hover, input[type=submit]:hover {
         opacity:0.8;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px LightSkyBlue; 
 }
 
 button:active , .button:active , input[type=submit]:active  {
-        opacity: 0.6; 
+        border-color: Red;
+        color: Red;
 }
 
 button.-round {
@@ -54,10 +60,6 @@ button.-disabled:hover, .button.-disabled:hover, input[type=submit].-disabled:ho
         box-shadow: inset 3px 5px 10px -6px rgba(0, 0, 0, 0.5), inset 0 0 10px 30px rgba(0, 0, 0, 0.05);
         cursor: default; }
 
-input[type=submit], button.-main, .button.-main {
-        background: dodgerblue;
-        color: white; 
-}
 
 /* Forms & Inputs */
 .form  {padding: 0.8em 1em 1em 1em; border: solid 1px rgba(0,0,0,0.1); margin-bottom: 1em;}

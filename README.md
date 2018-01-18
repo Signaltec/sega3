@@ -4,6 +4,10 @@
 Компоненты, верстаются при помощи css-классов, стили в components.less. 
 Вариации элемента задаются модификаторами.
 
+- (http://signaltech.github.io/sega3/)[Основные элементы]
+- (http://signaltech.github.io/sega3/example.html)[Примеры]
+
+
 ## Installation
 
 npm install sega3 

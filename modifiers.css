@@ -4,11 +4,11 @@
 .-indent-top { margin-top: 4px !important; }
 .-indent-right { margin-top: 4px !important; }
 .-indent-bottom { margin-bottom: 4px !important; }
-.-indent { .-indent-top(); .-indent-bottom(); }
+.-indent { margin: 4px 0; }
 
 .-indent-top-small { margin-top: 2px !important; }
 .-indent-bottom-small { margin-bottom: 2px !important; }
-.-indent-small { .-indent-top-small(); .-indent-bottom-small(); }
+.-indent-small { margin: 2px 0; }
 
 .-indent-big { margin-top: 8px !important; margin-bottom: 8px !important; }
 

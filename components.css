@@ -1,5 +1,6 @@
 footer {
     padding: 24px;
+    color: darkgray;
     color: rgba(0,0,0,0.5);
     text-align: center;
     font-size: 80%; 
@@ -15,10 +16,7 @@ button, .button, input[type=submit] {
     border-radius: 2em;
     background: white;
     cursor: pointer;
-
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
   
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -99,7 +97,7 @@ input[type="text"], input[type="number"], input[type="password"], textarea, sele
     width: 200px;
     box-sizing: border-box;
     box-shadow: none;
-    border: solid 1px rgba(0,0,0,0.1)
+    border: solid 1px rgba(0,0,0,0.1);
     font-size: 0.9em; }
 
 input[type="text"], input[type="password"], textarea {

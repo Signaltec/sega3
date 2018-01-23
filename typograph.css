@@ -37,21 +37,17 @@ body {
     font-size: 14px;
     min-width: 780px;
     width: 65%; 
-    min-width:450px; 
     margin: 3em auto
   }
 }
 
 h1, h2, h3 { 
-  font-family: 'PT sans Caption', sans-serif; 
-  font-size: 150%;
-  color: black;
-}
-
-h1, h2 { 
+  font-family: 'PT sans Caption', sans-serif;
   font-weight: normal;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: uppercase;  
+  font-size: 150%;
+  color: black;
 }
 
 h1 {
@@ -67,6 +63,8 @@ h2 {
 
 h3 {
     margin: 1em 0 0.4em 0;
+    font-weight: bold;
+    text-transform: none;
     font-size: 1.2em; }
 
 hgroup h1, hgroup h2, hgroup h2 {
@@ -81,11 +79,13 @@ cite {
     max-width: 320px;
     color: rgba(0,0,0,0.7);
     font-style: italic;
+}
 
-    author {
+author {
         display: block;
         margin-top: 1em;
-        font-style: italic; } }
+        font-style: italic; 
+}
 
 code.-block {
   font-size: 80%;

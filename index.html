@@ -25,9 +25,9 @@
       el = document.querySelector(el);
       console.log(flag);
       if (typeof flag == 'undefined') {
-        el.className = ' ' + className;
+        el.classList.add(className);
       } else {
-        if (flag)  el.className += ' ' + className; else el.className = el.className.replace(className, '');
+        if (flag) el.classList.add(className); else el.classList.remove(className);
       }
   }
     
@@ -215,8 +215,8 @@
     <form>
           Модификаторы: 
           <ul class="unstyled indent-top">
-            <li><input type="checkbox" onclick="setMod('.table', '.auto', this.checked)"> auto</li>
-            <li><input type="checkbox" checked onclick="setMod('.table', '.hover', this.checked)"> tr-hover</li>
+            <li><input type="checkbox" onclick="setMod('.table', 'auto', this.checked)"> auto</li>
+            <li><input type="checkbox" checked onclick="setMod('.table', 'tr-hover', this.checked)"> tr-hover</li>
           </ul>
 
     </form>  

@@ -1,6 +1,6 @@
 {
   "name": "sega3",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "SEGA 3 — CSS library",
   "main": "index.html",
   "scripts": {
@@ -8,7 +8,10 @@
     "lint": "node ./node_modules/csslint/dist/cli.js ./*.css",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
-  "pre-commit": [ "precommit-msg", "lint" ],
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Signaltech/sega3.git"

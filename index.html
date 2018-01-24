@@ -72,13 +72,22 @@
     
       <h2>Кнопки</h2>
         
-      <div class="button-examples">
-        <button>Отмена</button>
+      <div class="button-examples button-examples-shadows">
+        1) <button>Отмена</button>
         <input type="submit" value="Сохранить">
 		<a class="button main"><i class="mdi mdi-check"></i> Готово</a>
 		<button class="round"><i class="mdi mdi-plus"></i></button>
+		<i class="mdi mdi-plus flaticon"></i>
       </div>
 
+      <div class="button-examples button-examples-noshadows">
+        2) <button>Отмена</button>
+        <input type="submit" value="Сохранить">
+		<a class="button main"><i class="mdi mdi-check"></i> Готово</a>
+		<button class="round"><i class="mdi mdi-plus"></i></button>
+		<i class="mdi mdi-plus flaticon"></i>
+      </div>    
+    
       <script>
           showCode('.button-examples');
       </script>
@@ -103,7 +112,7 @@
   
       <h2>Таблицы</h2>
       
-      <table class="table hover">
+      <table class="table tr-hover">
         <colgroup>
             <col class="c1">
             <col class="c1">
@@ -207,7 +216,7 @@
           Модификаторы: 
           <ul class="unstyled indent-top">
             <li><input type="checkbox" onclick="setMod('.table', '.auto', this.checked)"> auto</li>
-            <li><input type="checkbox" checked onclick="setMod('.table', '.hover', this.checked)"> hover</li>
+            <li><input type="checkbox" checked onclick="setMod('.table', '.hover', this.checked)"> tr-hover</li>
           </ul>
 
     </form>  
@@ -256,6 +265,31 @@
 	
     <style>
       .button-examples button, .button-examples input,  .button-examples a {margin-right:16px; vertical-align:middle}
+    
+      .button-examples-shadows .flaticon {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+      
+      
+      .button-examples-noshadows {margin-top: 1em}
+      .button-examples-noshadows button, .button-examples-noshadows input, .button-examples-noshadows .button {box-shadow: none}
+      .button-examples-noshadows button:hover, .button-examples-noshadows input:hover, .button-examples-noshadows .button:hover {
+    color: dodgerblue;
+    border-color: dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;   
+      }
+      .button-examples-noshadows input, .button-examples-noshadows .main {
+        background: white;
+        color: MediumSeaGreen;
+        border-color: MediumSeaGreen;
+      }
+      
+      /*
+    .button-examples-noshadows input:hover, .button-examples-noshadows .main:hover {
+    color: white;
+      }
+      */
+      
     </style>
     
   <section>

@@ -4,7 +4,7 @@
 Компоненты, верстаются при помощи css-классов, стили в components.less. 
 Вариации элемента задаются модификаторами.
 
-- [Основные элементы](http://signaltech.github.io/sega3/)
+- [Элементы](http://signaltech.github.io/sega3/)
 - [Примеры](http://signaltech.github.io/sega3/examples.html)
 
 ## Installation

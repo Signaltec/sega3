@@ -1,0 +1,6 @@
+{
+  "ignore": 
+    ["adjoining-classes", "order-alphabetical", "fallback-colors", "outline-none", "box-model", "box-sizing",
+    "important", "import", "overqualified-elements", "qualified-headings", "unique-headings", "unqualified-attributes"
+    ]
+}

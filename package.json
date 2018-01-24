@@ -4,12 +4,19 @@
   "description": "SEGA 3 — CSS library",
   "main": "index.html",
   "scripts": {
-    "start": "open index.html"
+    "start": "open index.html",
+    "lint": "node ./node_modules/csslint/dist/cli.js ./*.css",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [ "precommit-msg", "lint" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Signaltech/sega3.git"
   },
   "author": "ildarka",
-  "license": "FREE"
+  "license": "MIT",
+  "devDependencies": {
+    "csslint": "^1.0.5",
+    "pre-commit": "^1.2.2"
+  }
 }

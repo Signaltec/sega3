@@ -18,7 +18,7 @@
   
   function toggle(selector) {
     var el = document.querySelector(selector);
-    el.classList.toggle('-collapsed');
+    el.classList.toggle('collapsed');
   }
 
   function setMod(el, className, flag) {
@@ -35,7 +35,7 @@
     var el = document.querySelector(selector);
     var c = el.outerHTML;
     c = escapeHtml(c);
-    document.write( '<br /><code class="-block">' + c + '</code>');
+    document.write( '<br /><code class="block">' + c + '</code>');
   }
   </script>
   
@@ -43,7 +43,7 @@
 
 <body>
   
-    <h1 class="-border-bottom" style="margin-top:0.5em">Segа 3</h1>
+    <h1 class="border-bottom" style="margin-top:0.5em">Segа 3</h1>
 
   <main>
     
@@ -62,7 +62,7 @@
       <ul class="links">
         <li><a href="">Обычная ссылка</a></li>
         <li>
-          <a href="" class="-pseudo-link">Внутренняя ссылка</a>
+          <a href="" class="pseudo-link">Внутренняя ссылка</a>
         </li>
       </ul>
     
@@ -75,8 +75,8 @@
       <div class="button-examples">
         <button>Отмена</button>
         <input type="submit" value="Сохранить">
-		<a class="button -main"><i class="mdi mdi-check"></i> Готово</a>
-		<button class="-round"><i class="mdi mdi-plus"></i></button>
+		<a class="button main"><i class="mdi mdi-check"></i> Готово</a>
+		<button class="round"><i class="mdi mdi-plus"></i></button>
       </div>
 
       <script>
@@ -85,12 +85,12 @@
     
 
         <h2>TAP</h2>
-  		<nav class="taps -indent-top">
+  		<nav class="taps indent-top">
 			<span class="tap">
 				<a>1</a>
 			</span>
 	
-			<span class="tap -active">
+			<span class="tap active">
 				2
 			</span>
 		</nav>
@@ -103,7 +103,7 @@
   
       <h2>Таблицы</h2>
       
-      <table class="table -hover">
+      <table class="table hover">
         <colgroup>
             <col class="c1">
             <col class="c1">
@@ -144,14 +144,14 @@
 
         <td>
           <span>—</span>
-          <div class="-misc">
+          <div class="misc">
           100
           </div>  
         </td>
 
         <td>
           <span>—</span>
-          <div class="-misc">
+          <div class="misc">
           L3
           </div>  
         </td>
@@ -181,14 +181,14 @@
 
         <td>
           <span>—</span>
-          <div class="-misc">
+          <div class="misc">
           100
           </div>  
         </td>
 
         <td>
           <span>—</span>
-          <div class="-misc">
+          <div class="misc">
           L3
           </div>  
         </td>
@@ -205,9 +205,9 @@
         
     <form>
           Модификаторы: 
-          <ul class="-unstyled -indent-top">
-            <li><input type="checkbox" onclick="setMod('.table', '-auto', this.checked)"> -auto</li>
-            <li><input type="checkbox" checked onclick="setMod('.table', '-hover', this.checked)"> -hover</li>
+          <ul class="unstyled indent-top">
+            <li><input type="checkbox" onclick="setMod('.table', '.auto', this.checked)"> auto</li>
+            <li><input type="checkbox" checked onclick="setMod('.table', '.hover', this.checked)"> hover</li>
           </ul>
 
     </form>  
@@ -222,7 +222,7 @@
         <div class="field">
           <label>IP-адрес</label>
           <input value="192.168.0.1" class="c6" type="text"/>
-          <span class="-error">Неверный IP-адрес</span>
+          <span class="error">Неверный IP-адрес</span>
         </div>
 
         <div class="field">
@@ -262,15 +262,15 @@
   
       <h2>Модификаторы</h2>
 	  <ul>
-       <li>Размера: -small, -mid, -big, -extra</li>
-       <li>Состояния: -disabled, -active, -selected, -open, -collapsed, -hide, -visible</li>
-       <li>Положения: -fixed</li>
-       <li>Отображения: -ellipsis, -overflow-hidden</li>
-       <li>Приоритета: -misc</li>
+       <li>Размера: small, mid, big, extra</li>
+       <li>Состояния: disabled, active, selected, open, collapsed, hide, visible</li>
+       <li>Положения: fixed</li>
+       <li>Отображения: ellipsis, overflow-hidden</li>
+       <li>Приоритета: misc</li>
       </ul>
 
       <cite>
-        При создании кастомного модификатора, например, для -fixed используется следующий порядок: -fixed-header.
+        При создании кастомного модификатора, например, для fixed используется следующий порядок: fixed-header.
       </cite>  
 </section>
 

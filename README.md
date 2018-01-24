@@ -23,3 +23,13 @@ npm install sega3
 - src/typograph.css — типографика
 - src/modifiers.css — модификаторы
 - src/components.css — компоненты (таблицы, формы, хидер, футер, кнопки)
+
+## Development
+
+git clone …
+
+npm install
+
+make changes
+
+npm run lint 

@@ -87,7 +87,7 @@ author {
         font-style: italic; 
 }
 
-code.-block {
+code.block {
   font-size: 80%;
   background-color: rgba(0,0,0,0.1);
   padding: 1em;
@@ -119,8 +119,8 @@ li {
     padding-bottom: 0.3em; 
 }
 
-ul.-unstyled { margin: 0; padding: 0; }
-.-unstyled li { list-style-type: none; }
+ul.unstyled { margin: 0; padding: 0; }
+.unstyled li { list-style-type: none; }
 
 dl {
     padding: 5px 0 5px 0; 

@@ -22,6 +22,10 @@ body {
   color: rgba(0,0,0,0.7);
 }
 
+[ng-view] {
+    height: 100%;
+}
+
 /* Responsive ---------------------- */
 @media screen and (min-width: 320px) {
   main {

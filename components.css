@@ -59,9 +59,10 @@ button.disabled:hover, .button.disabled:hover, input[type=submit].disabled:hover
     cursor: not-allowed; 
 }
 
+.save.changes {background: dodgerblue; color: white}
 
 /* Forms & Inputs */
-.form  {padding: 2em; border: solid 1px rgba(0,0,0,0.1); margin-bottom: 1em;}
+.form  {}
 
 .field {
         margin-bottom: 24px;
@@ -91,9 +92,11 @@ input[type="text"], input[type="password"], textarea {
 input[type="text"], input[type="password"], select {
     height: 1.8em; }
 
+input.ng-invalid:not(.ng-pristine){
+    border-color: #cc0000;
+}
+
 /* Модификаторы длины */
-input.half, select.half {width: 100px}
-input.twice, textarea.twice {width: 400px}
 input.full, textarea.full {width: 100%}
 
 /* Errors */
@@ -121,6 +124,11 @@ input.error {border-color: orangered;}
         text-align:left;
 } 
 
+.nowrap td, td.nowrap {white-space: nowrap }
+
+.table-split tbody tr {border-bottom: solid 1px #eee;}
+.table-split tbody tr:last-child {border-bottom: none;}
+
 
 /* Taps */   
 .taps { margin-left: -0.5em;}
@@ -128,6 +136,7 @@ input.error {border-color: orangered;}
     display: inline-block;
     padding: 5px 10px 4px 10px;
 }
+.taps-vertical .tap {display: block;}
 .tap a {border-bottom: dotted 1px black; } 
 .tap.active {
         border-radius: 2px;
@@ -178,7 +187,13 @@ span.date, div.date {color: rgba(0,0,0,0.5) }
   opacity:0.8;
 }
 
-.login {width:100%; height:100%; background: black;}
+section.login {
+  position: absolute;
+  top: 0;
+  width:100%; 
+  height:100%;
+  background: black;
+}
 
 .login label {color: rgba(255,255,255,0.5)}
 
@@ -211,4 +226,15 @@ span.date, div.date {color: rgba(0,0,0,0.5) }
 
 .menu-main a:last-child { 
   margin-right:0;
+}
+
+/* panel */
+.panel {padding: 2em; border: solid 1px rgba(0,0,0,0.1);}
+
+/* spinner */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }

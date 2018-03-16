@@ -62,7 +62,7 @@ button.disabled:hover, .button.disabled:hover, input[type=submit].disabled:hover
 .save.changes {background: dodgerblue; color: white}
 
 /* Forms & Inputs */
-.form  {}
+.form {display: block;}
 
 .field {
         margin-bottom: 24px;
@@ -236,5 +236,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    -moz-appearance: none;
+    /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0; 
 }

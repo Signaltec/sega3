@@ -89,11 +89,11 @@
 }
 
 /* Модификаторы ширины */
-.c1, input.c1 {width: 16px;}
-.c2, input.c2, select.c2 {width: 32px;}
-.c3, input.c3, select.c3 {width: 48px;}
-.c4, input.c4, select.c4 {width: 64px;}
-.c5, input.c5, select.c5 {width: 80px;}
-.c6, input.c6, select.c6 {width: 96px;}
-.c7, input.c7, select.c7 {width: 112px;}
+.c1, input[type="text"].c1, input[type="number"].c1 {width: 16px;}
+.c2, input[type="text"].c2, input[type="number"].c2 {width: 32px;}
+.c3, input[type="text"].c3, input[type="number"].c3, select.c3 {width: 48px;}
+.c4, input[type="text"].c4, input[type="number"].c4, select.c4 {width: 64px;}
+.c5, input[type="text"].c5, input[type="number"].c5, select.c5 {width: 80px;}
+.c6, input[type="text"].c6, input[type="number"].c6, select.c3 {width: 96px;}
+.c7, input[type="text"].c7, input[type="number"].c7, select.c7 {width: 112px;}
 

@@ -19,6 +19,14 @@ button, .button, input[type=submit] {
     user-select: none;
 }
 
+button.unstyled, .button.unstyled, input[type=submit].unstyled {
+    border: none;
+}
+
+button.unstyled:hover, .button.unstyled:hover, input[type=submit].unstyled:hover {
+    box-shadow: none;
+}
+
 button:focus, .button:focus, input[type=submit]:focus {
   outline: none; 
 }
